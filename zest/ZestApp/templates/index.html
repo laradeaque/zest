@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Zest Cakes - Fresh Cakes & Small Chops</title>
+{% endblock title %}
+
+{% block content %}
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <h1 class="headline">Let's Taste Perfection</h1>
+            <a href="#reservation" class="btn btn-primary">Order Now</a>
+        </div>
+    </section>
+
+    <!-- STORY SECTION -->
+
+    <section class="our-story">
+        <div class="container">
+            <div class="row">
+                <div class="description padding-right animate-left">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">
+                            Discover
+                        </h2>
+                        <h3 class="headline headline-dark">Our Story</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p>Once upon a time, a humble dream sparked a baking revolution. With passion, precision, and a pinch of magic, we crafted extraordinary cakes, igniting moments of pure delight in the lives of our cherished customers. Welcome to our sweet tale of indulgence.</p>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="image animate-right">
+                    <img class="story-img" src="{% static 'images/story-img.jpg' %}" alt="bread">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALWAYS FRESH -->
+    <section class="always-fresh shared">
+        <div class="container">
+            <div class="global-headline">
+                <div class="animate-top">
+                    <h2 class="sub-headline">
+                        Always
+                    </h2>
+                </div>
+                <div class="animate-bottom">
+                    <h3 class="headline headline-dark">Fresh</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="image-group padding-right animate-left">
+                    <img src="{% static 'images/square-1.jpg' %}" alt="image">
+                    <img src="{% static 'images/square-2.jpg' %}" alt="image">
+                    <img src="{% static 'images/square-3.jpg' %}" alt="image">
+                    <img src="{% static 'images/square-4.jpg' %}" alt="image">
+                </div>
+                <div class="description animate-right">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">
+                            Explore
+                        </h2>
+                        <h3 class="headline headline-dark">Taste</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p>Experience a tantalizing journey of taste and texture as you explore our diverse range of cakes, each a masterpiece in its own right.</p>
+                   <!-- <a onclick="openNav()" class="btn btn-secondary">See Full Menu</a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TASTY SECTION -->
+    <section class="tasty shared">
+        <div class="container">
+            <div class="global-headline">
+                <div class="animate-top">
+                    <h2 class="sub-headline">
+                        Everything
+                    </h2>
+                </div>
+                <div class="animate-bottom">
+                    <h3 class="headline headline-dark">Tasty</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- BAKERS DELIGHT SECTION -->
+    <section class="delight">
+        <div class="container">
+            <div class="row">
+                <div class="description padding-right animate-left">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">
+                            Zest Cakes'
+                        </h2>
+                        <h3 class="headline headline-dark">Delight</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p>Enter a world of pure pastry perfection, where our skilled bakers infuse their expertise and passion into every delightful creation. With each bite of our heavenly cakes, experience the taste of love and unforgettable flavors.</p>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Place an Order</a>
+                </div>
+                <div class="image-group animate-right">
+                    <img class="animate-top" src="{% static 'images/bakers-delight-1.jpg' %}" alt="bread">
+                    <img class="animate-bottom" src="{% static 'images/bakers-delight-1.jpg' %}" alt="bread">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- RESERVATION SECTION -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="reservation__container">
+                <h4>Order Your Cake</h4>
+                <form method="post" class="reservation__form">
+                    {% csrf_token %}
+                    <input type="text" name="email" maxlength=60 placeholder="Your Email/Phone" class="reservation__email" required>
+                    <select name="occasion" required>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Baby_Shower">Baby Shower</option>
+                        <option value="Holiday">Holiday</option>
+                        <option value="Milestone">Milestone</option>
+                    </select>
+                    <input type="number" name="size" placeholder="Cake Size(KG)" min=0 class="reservation__size">
+                    <br/>
+                    <input type="text" placeholder="Any specifications?" name="specs" class="reservation__text">
+                    <div class="half">
+                        <input type="text" value="Delivery Date" disabled class="reservation__text"
+                        onclick="document.getElementById('delivery-date').focus()">
+                        <input type="date" name="d-day" class="reservation__date" id="delivery-date">
+                    </div>
+                    <button class="btn btn-primary submit__reservation">Order Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

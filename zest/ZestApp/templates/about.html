@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>About Us - Zest Cakes</title>
+{% endblock title %}
+
+{% block content %}
+    <!-- HERO SECTION -->
+
+    <section class="hero small-size-hero" id="hero">
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="description padding-right animate-left">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">
+                            Read
+                        </h2>
+                        <h3 class="headline headline-dark">Our Story</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p>Once upon a time, amidst a realm of flour and sugar, a humble dream ignited.
+                    Guided by a relentless pursuit of perfection, we conjured up extraordinary cakes that stirred souls and ignited taste buds. With passion as our compass and precision as our wand, each creation was an enchanting masterpiece, bringing joy to those who indulged.</p>
+                    
+                    <p>Our journey from a modest kitchen to confectionery delight reflects unwavering dedication to culinary artistry. Synonymous with decadence and bliss, our exquisite cakes earn trust and loyalty. Meticulously crafted with love and magic, they shape cherished memories. Embrace a world where dreams and flavors intertwine, indulging in each delectable bite. Join us as we invite you to savor the perfect symphony of taste, a testament to our sweet success.</p>
+                </div>
+                <div class="image animate-right">
+                    <img class="animate-top" src="{% static 'images/about-img-2.jpeg' %}" alt="bread">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="image padding-right margin-bottom animate-left">
+                    <img src="{% static 'images/about-img-1.jpeg' %}" alt="bread">
+                </div>
+                <div class="description animate-right">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">
+                            Bread
+                        </h2>
+                        <h3 class="headline headline-dark">So Good</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p>Irresistible aroma, crusty perfection, and fluffy texture—bread so good. Savor the satisfaction of 
+                    artisanal bread, baked with passion. Experience the magic of freshly baked bread, simply divine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

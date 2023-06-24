@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Bakers - Zest Cakes</title>
+{% endblock title %}
+
+{% block content %}
+    <!-- HERO SECTION -->
+
+    <section class="hero small-size-hero" id="hero">
+    </section>
+
+    <!-- BAKERS -->
+    <section class="bakers">
+        <div class="container">
+            <div class="global-headline">
+                <h2 class="sub-headline">
+                    Our
+                </h2>
+                <h3 class="headline headline-dark">Bakers</h3>
+                <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+            </div>
+            <div class="bakers__container">
+                <div class="baker">
+                    <img src="{% static 'images/baker-1.jpg' %}" alt="baker">
+                    <h5>John Doe</h5>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="baker">
+                    <img src="{% static 'images/baker-2.jpg' %}" alt="baker">
+                    <h5>Smith Doe</h5>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="baker">
+                    <img src="{% static 'images/baker-3.jpg' %}" alt="baker">
+                    <h5>Jane Doe</h5>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="baker">
+                    <img src="{% static 'images/baker-4.jpg' %}" alt="baker">
+                    <h5>Chris Doe</h5>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN US SECTION -->
+    <section class="join-us">
+        <div class="container">
+            <div class="row">
+                <div class="image padding-right animate-left">
+                    <img src="{% static 'images/about-img-1.jpeg' %}" alt="bread">
+                </div>
+                <div class="description animate-right">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">
+                            Careers
+                        </h2>
+                        <h3 class="headline headline-dark">Join Us</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p>Embark on a rewarding journey with us and unleash your culinary passion. Discover endless opportunities to grow and thrive in our vibrant cake-making family.</p>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
